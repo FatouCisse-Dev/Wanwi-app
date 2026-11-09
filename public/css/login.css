@@ -1,0 +1,196 @@
+/* <<couleurs>> */
+:root {
+    --vert: #17382B;
+    --orange: #F29B1F;
+    --fond: #E9F1EA;
+}
+
+/* <<réinitialisation>> */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* <<page>> */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fond);
+    min-height: 100vh;
+}
+
+/* <<en-tête>> */
+header {
+    background: var(--vert);
+    color: white;
+    text-align: center;
+    padding: 56px 24px 40px;
+    border-radius: 0 0 36px 36px;
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+header p {
+    margin-top: 6px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* <<logo>> */
+.logo-img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 14px;
+}
+
+/* <<conteneur du formulaire>> */
+main {
+    padding: 28px;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* <<formulaire>> */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* <<labels>> */
+label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--vert);
+    margin-bottom: 4px;
+}
+
+/* <<champs>> */
+input {
+    border: none;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.25);
+    background: transparent;
+    padding: 10px 2px;
+    font-size: 15px;
+    margin-bottom: 22px;
+    outline: none;
+}
+
+input:focus {
+    border-bottom: 2px solid var(--vert);
+}
+
+/* <<bouton connexion>> */
+button {
+    background: var(--orange);
+    color: var(--vert);
+    border: none;
+    border-radius: 16px;
+    height: 54px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+    margin-top: 6px;
+}
+
+button:hover {
+    filter: brightness(0.95);
+}
+
+/* <<message d'erreur>> */
+.erreur {
+    color: #C0392B;
+    font-size: 13px;
+    font-weight: 600;
+    margin: -14px 0 16px;
+}
+
+/* <<texte d'explication>> */
+.aide-texte {
+    font-size: 14px;
+    color: #4C5B53;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* <<champ du code à 6 chiffres>> */
+.champ-code {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 10px;
+}
+
+/* <<bouton "renvoyer le code" : un simple lien>> */
+.lien-renvoi {
+    display: block;
+    margin: 14px auto 0;
+    background: none;
+    box-shadow: none;
+    height: auto;
+    border-radius: 0;
+    color: var(--vert);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* <<champ mot de passe : conteneur>> */
+.champ-mdp {
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.champ-mdp input {
+    width: 100%;
+    margin-bottom: 0;
+    padding-right: 44px;
+}
+
+/* <<bouton œil, posé à droite du champ>> */
+.champ-mdp .oeil {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    padding: 6px;
+    border: none;
+    border-radius: 50%;
+    background: none;
+    box-shadow: none;
+    color: #6B7A72;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.champ-mdp .oeil:hover {
+    background: rgba(23, 56, 43, 0.08);
+    filter: none;
+}
+
+.oeil svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* <<une seule icône visible à la fois>> */
+.oeil .icone-barre {
+    display: none;
+}
+
+.oeil.actif .icone-ouvert {
+    display: none;
+}
+
+.oeil.actif .icone-barre {
+    display: block;
+}

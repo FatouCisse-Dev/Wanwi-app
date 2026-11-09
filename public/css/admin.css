@@ -1,0 +1,1325 @@
+/* <<couleurs>> */
+:root {
+    --vert: #17382B;
+    --orange: #F29B1F;
+    --fond: #E9F1EA;
+}
+
+/* <<réinitialisation>> */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* <<page>> */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fond);
+    min-height: 100vh;
+}
+
+/* <<en-tête>> */
+.entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 28px;
+}
+
+.entete-gauche {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    background: var(--vert);
+    color: var(--orange);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.entete h1 {
+    font-size: 20px;
+    color: var(--vert);
+}
+
+.entete p {
+    font-size: 13px;
+    color: #6B7A72;
+}
+
+.entete-droite {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* <<badge admin>> */
+.badge-admin {
+    background: var(--orange);
+    color: var(--vert);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.deconnexion {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    color: var(--vert);
+    font-weight: 600;
+    font-size: 14px;
+    
+}
+
+
+/* <<contenu de la page>> */
+.contenu {
+    padding: 0 28px 110px;
+}
+
+/* <<grille des cartes>> */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+/* <<carte de statistique>> */
+.carte-stat {
+    background: white;
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.carte-haut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+/* <<icône de la carte>> */
+.icone-stat {
+    width: 40px;
+    height: 40px;
+    background: var(--fond);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* <<pastille de variation>> */
+.variation {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.variation.positif {
+    background: #DDEEE2;
+    color: #1E6B45;
+}
+
+.variation.negatif {
+    background: #F8DCDC;
+    color: #C0392B;
+}
+
+/* <<valeur et libellé>> */
+.valeur {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--vert);
+}
+
+.libelle {
+    font-size: 13px;
+    color: #6B7A72;
+    margin-top: 2px;
+}
+
+/* <<titre du bloc>> */
+.titre-bloc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px 0 14px;
+}
+
+.titre-bloc h2 {
+    font-size: 17px;
+    color: var(--vert);
+}
+
+.titre-bloc a {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--vert);
+    text-decoration: none;
+}
+
+/* <<liste des commandes>> */
+.liste-commandes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* <<ligne de commande>> */
+.ligne-commande {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: white;
+    border-radius: 18px;
+    padding: 14px 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* <<icône du statut>> */
+.icone-statut {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* <<infos de la commande>> */
+.infos-commande {
+    flex: 1;
+}
+
+.ligne-haut {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--vert);
+}
+
+.ligne-bas {
+    font-size: 13px;
+    color: #6B7A72;
+    margin-top: 3px;
+}
+
+/* <<montant et heure>> */
+.montant-commande {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: var(--vert);
+}
+
+.montant-commande span {
+    font-size: 12px;
+    color: #6B7A72;
+    margin-top: 3px;
+}
+
+/* <<pastille de statut>> */
+.pastille {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+/* <<couleurs des statuts>> */
+.livree {
+    background: #DDEEE2;
+    color: #1E6B45;
+}
+
+.en-cours {
+    background: #DCE8F8;
+    color: #2F5FA8;
+}
+
+.en-attente {
+    background: #FCEBDD;
+    color: #C77A12;
+}
+
+/* <<carte>> */
+.carte-livreurs {
+    position: relative;
+    height: 230px;
+    border-radius: 20px;
+    background-color: #DCE9DD;
+    background-image:
+        linear-gradient(rgba(23, 56, 43, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23, 56, 43, 0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+/* <<point sur la carte>> */
+.point {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background: var(--orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    box-shadow: 0 0 0 6px rgba(242, 155, 31, 0.25);
+}
+
+/* <<point dépôt>> */
+.point.depot {
+    background: var(--vert);
+    box-shadow: none;
+}
+
+/* <<indicateur en direct et badge>> */
+.en-direct {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1E6B45;
+    margin-left: 6px;
+}
+
+.badge-actifs {
+    background: #DDEEE2;
+    color: #1E6B45;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+/* <<compteurs par statut>> */
+.compteurs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.compteur {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border-radius: 16px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #6B7A72;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.compteur strong {
+    font-size: 18px;
+    color: var(--vert);
+}
+
+/* <<puces de statut>> */
+.puce {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.puce.en-ligne    { background: #1E6B45; }
+.puce.occupe      { background: var(--orange); }
+.puce.hors-ligne  { background: #9AA5A0; }
+.puce.suspendu    { background: #C0392B; }
+
+/* <<liste des livreurs>> */
+.liste-livreurs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ligne-livreur {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: white;
+    border-radius: 18px;
+    padding: 14px 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* <<avatar du livreur>> */
+.avatar-livreur {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    background: var(--vert);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.puce-avatar {
+    position: absolute;
+    right: -3px;
+    bottom: -3px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.puce-avatar.en-ligne    { background: #1E6B45; }
+.puce-avatar.occupe      { background: var(--orange); }
+.puce-avatar.hors-ligne  { background: #9AA5A0; }
+.puce-avatar.suspendu    { background: #C0392B; }
+
+/* <<infos du livreur>> */
+.infos-livreur {
+    flex: 1;
+}
+
+.activite {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--vert);
+    margin-top: 3px;
+}
+
+/* <<note et livraisons>> */
+.note-livreur {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    font-size: 12px;
+    color: #6B7A72;
+}
+
+.note {
+    background: #FCEBDD;
+    color: #C77A12;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* <<couleurs des pastilles de statut livreur>> */
+.pastille.en-ligne   { background: #DDEEE2; color: #1E6B45; }
+.pastille.occupe     { background: #FCEBDD; color: #C77A12; }
+.pastille.hors-ligne { background: #E6E9E7; color: #6B7A72; }
+.pastille.suspendu   { background: #F8DCDC; color: #C0392B; }
+
+/* <<bouton ajouter>> */
+.bouton-ajouter {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--vert);
+    font-weight: 800;
+    font-size: 14px;
+    padding: 12px 22px;
+    border-radius: 16px;
+    text-decoration: none;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* <<message de succès>> */
+.succes {
+    background: #DDEEE2;
+    color: #1E6B45;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 16px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+}
+
+/* <<formulaire dans une carte>> */
+.formulaire-carte {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.formulaire-carte label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--vert);
+    margin-bottom: 6px;
+}
+
+/* <<champs du formulaire>> */
+.formulaire-carte input,
+.formulaire-carte select {
+    background: var(--fond);
+    border: 1.5px solid transparent;
+    border-radius: 12px;
+    padding: 13px 14px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    outline: none;
+}
+
+.formulaire-carte input:focus,
+.formulaire-carte select:focus {
+    border-color: var(--vert);
+}
+
+/* <<message d'erreur>> */
+.erreur {
+    color: #C0392B;
+    font-size: 13px;
+    font-weight: 600;
+    margin: -12px 0 16px;
+}
+
+/* <<boutons du formulaire>> */
+.boutons-formulaire {
+    display: flex;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.boutons-formulaire button,
+.bouton-annuler {
+    flex: 1;
+    height: 50px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.boutons-formulaire button {
+    background: var(--vert);
+    color: white;
+    border: none;
+}
+
+.bouton-annuler {
+    background: white;
+    color: var(--vert);
+    border: 1.5px solid #D5DED7;
+}
+
+/* <<puces de statut tricycle>> */
+.puce.actif        { background: #1E6B45; }
+.puce.maintenance  { background: var(--orange); }
+.puce.inactif      { background: #9AA5A0; }
+
+/* <<pastilles de statut tricycle>> */
+.pastille.actif       { background: #DDEEE2; color: #1E6B45; }
+.pastille.maintenance { background: #FCEBDD; color: #C77A12; }
+.pastille.inactif     { background: #E6E9E7; color: #6B7A72; }
+
+/* <<menu de navigation en bas>> */
+.menu-bas {
+    position: fixed;
+    z-index: 100;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 520px;
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    border-radius: 28px;
+    padding: 8px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.menu-bas a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 8px 4px;
+    border-radius: 20px;
+    color: #6B7A72;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu-icone {
+    font-size: 20px;
+}
+
+.menu-bas a.actif {
+    background: var(--vert);
+    color: white;
+}
+
+/* <<boutons d'actions de la page>> */
+.actions-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.actions-page .bouton-ajouter {
+    margin-bottom: 0;
+}
+
+.bouton-secondaire {
+    background: white;
+    color: var(--vert);
+    border: 1.5px solid #D5DED7;
+    box-shadow: none;
+}
+
+/* <<fenêtre de confirmation>> */
+.fenetre {
+    border: none;
+    border-radius: 24px;
+    padding: 26px;
+    width: calc(100% - 40px);
+    max-width: 380px;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* <<fond assombri derrière la fenêtre>> */
+.fenetre::backdrop {
+    background: rgba(17, 41, 31, 0.55);
+}
+
+.fenetre h2 {
+    font-size: 18px;
+    color: var(--vert);
+    margin-bottom: 8px;
+}
+
+.fenetre p {
+    font-size: 14px;
+    color: #4C5B53;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+/* <<boutons de la fenêtre>> */
+.boutons-fenetre {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.fenetre-annuler,
+.fenetre-confirmer {
+    border: none;
+    border-radius: 14px;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.fenetre-annuler {
+    background: transparent;
+    color: #6B7A72;
+}
+
+.fenetre-confirmer {
+    background: #C0392B;
+    color: white;
+}
+
+/* <<barre de recherche>> */
+.recherche {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    background: white;
+    border-radius: 18px;
+    padding: 0 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.recherche input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 16px 0;
+    font-size: 15px;
+}
+
+/* <<boutons de filtre>> */
+.filtres {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 16px 0;
+}
+
+.filtre {
+    white-space: nowrap;
+    padding: 9px 18px;
+    border-radius: 20px;
+    background: white;
+    color: var(--vert);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1.5px solid #D5DED7;
+}
+
+.filtre.actif {
+    background: var(--vert);
+    color: white;
+    border-color: var(--vert);
+}
+
+/* <<carte de commande>> */
+.carte-commande {
+    background: white;
+    border-radius: 18px;
+    padding: 16px 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.commande-haut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--vert);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.commande-detail p {
+    font-size: 14px;
+    color: #4C5B53;
+    margin-top: 5px;
+}
+
+.commande-bas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #E3EAE5;
+    font-size: 13px;
+    color: #6B7A72;
+}
+
+.commande-bas strong {
+    font-size: 16px;
+    color: var(--vert);
+}
+
+/* <<statut annulée>> */
+.annulee {
+    background: #F8DCDC;
+    color: #C0392B;
+}
+
+/* <<message "aucun résultat">> */
+.vide {
+    text-align: center;
+    color: #6B7A72;
+    padding: 30px 0;
+    grid-column: 1 / -1;
+}
+
+/* <<barre d'outils produits>> */
+.barre-outils {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.bouton-plus {
+    width: 54px;
+    background: var(--orange);
+    color: var(--vert);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* <<grille des produits>> */
+.grille-produits {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.carte-produit {
+    background: white;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.produit-haut {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+.icone-produit {
+    width: 46px;
+    height: 46px;
+    background: #FCEBDD;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.produit-nom {
+    font-weight: 800;
+    color: var(--vert);
+    font-size: 15px;
+}
+
+.produit-categorie {
+    font-size: 12px;
+    color: #6B7A72;
+    margin-bottom: 16px;
+}
+
+.produit-quantite {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--vert);
+}
+
+.produit-quantite small {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6B7A72;
+}
+
+/* <<barre de niveau de stock>> */
+.barre {
+    height: 6px;
+    background: #E3EAE5;
+    border-radius: 4px;
+    margin: 8px 0 12px;
+    overflow: hidden;
+}
+
+.barre-niveau {
+    height: 100%;
+    background: #1E6B45;
+    border-radius: 4px;
+}
+
+.barre-niveau.bas      { background: var(--orange); }
+.barre-niveau.critique { background: #C0392B; }
+
+.produit-prix {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--orange);
+}
+
+/* <<badge d'alerte de stock>> */
+.badge-stock {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.badge-stock.bas      { background: #FCEBDD; color: #C77A12; }
+.badge-stock.critique { background: #F8DCDC; color: #C0392B; }
+
+/* <<espace sous la recherche des livreurs>> */
+.compteurs + .recherche {
+    margin-top: 4px;
+}
+
+/* <<ligne cliquable>> */
+.lien-ligne {
+    text-decoration: none;
+    color: inherit;
+}
+
+.lien-ligne:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* <<lien de retour>> */
+.retour {
+    display: inline-block;
+    color: var(--vert);
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+/* <<fiche livreur>> */
+.fiche {
+    max-width: 560px;
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.fiche-haut {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.avatar-livreur.gros {
+    width: 72px;
+    height: 72px;
+    font-size: 30px;
+    border-radius: 22px;
+}
+
+.fiche-haut h2 {
+    font-size: 20px;
+    color: var(--vert);
+    margin-bottom: 6px;
+}
+
+.code {
+    font-size: 12px;
+    color: #6B7A72;
+}
+
+/* <<statistiques de la fiche>> */
+.fiche-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.fiche-stats div {
+    background: var(--fond);
+    border-radius: 16px;
+    padding: 14px 8px;
+    text-align: center;
+}
+
+.fiche-stats strong {
+    display: block;
+    font-size: 18px;
+    color: var(--vert);
+}
+
+.fiche-stats span {
+    font-size: 12px;
+    color: #6B7A72;
+}
+
+/* <<titres et lignes d'informations>> */
+.fiche h3 {
+    font-size: 14px;
+    color: var(--vert);
+    margin: 22px 0 8px;
+}
+
+.info-ligne {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #6B7A72;
+    border-bottom: 1px solid #EDF2EE;
+}
+
+.info-ligne strong {
+    color: var(--vert);
+}
+
+.info-ligne small {
+    font-size: 12px;
+}
+
+/* <<bouton danger>> */
+.boutons-formulaire .bouton-danger {
+    background: #C0392B;
+    color: white;
+    border: none;
+}
+
+/* <<zone de retrait>> */
+.zone-danger {
+    max-width: 480px;
+    margin-top: 16px;
+}
+
+.bouton-retirer {
+    width: 100%;
+    height: 50px;
+    border-radius: 14px;
+    border: 1.5px solid #C0392B;
+    background: white;
+    color: #C0392B;
+    font-size: 15px;
+    font-weight: 800;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.bouton-retirer:hover {
+    background: #FBEDEB;
+}
+
+/* <<deux champs côte à côte>> */
+.ligne-deux {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.ligne-deux > div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* <<ligne du total>> */
+.total-ligne {
+    border-bottom: none;
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+.total-ligne strong {
+    font-size: 18px;
+}
+
+/* <<historique de la commande>> */
+.chronologie {
+    list-style: none;
+    border-left: 2px solid #D5DED7;
+    margin: 6px 0 0 6px;
+    padding-left: 18px;
+}
+
+.chronologie li {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+    color: var(--vert);
+}
+
+.chronologie li::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 14px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--vert);
+    border: 2px solid white;
+}
+
+.chronologie small {
+    font-size: 12px;
+    color: #6B7A72;
+}
+
+/* <<bouton de réactivation>> */
+.boutons-formulaire .bouton-succes {
+    background: #1E6B45;
+    color: white;
+    border: none;
+}
+
+/* <<confirmation en vert>> */
+.fenetre-confirmer.fenetre-confirmer-vert {
+    background: #1E6B45;
+}
+
+/* <<lien mot de passe oublié>> */
+.lien-oublie {
+    align-self: flex-end;
+    margin: -10px 0 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--vert);
+    text-decoration: none;
+}
+
+/* <<lien de retour>> */
+.lien-retour {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--vert);
+    text-decoration: none;
+}
+
+/* <<message de succès>> */
+.succes {
+    background: #DDEEE2;
+    color: #1E6B45;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 12px 16px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+}
+
+/* <<tableau du stock>> */
+.ligne-stock {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    gap: 8px;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: var(--vert);
+    border-bottom: 1px solid #EDF2EE;
+}
+
+.ligne-stock.entete-stock {
+    font-size: 12px;
+    font-weight: 700;
+    color: #6B7A72;
+}
+
+/* <<quantité restante>> */
+.restant {
+    font-weight: 800;
+    color: #1E6B45;
+}
+
+.restant.bas {
+    color: #C0392B;
+}
+
+/* <<aide et erreur générale du formulaire>> */
+.aide {
+    font-size: 13px;
+    color: #6B7A72;
+    margin-bottom: 18px;
+}
+
+.erreur-haut {
+    margin: 0 0 14px;
+}
+
+/* <<cartes de statistiques cliquables>> */
+.carte-stat.lien-ligne {
+    display: block;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.carte-stat.lien-ligne:hover {
+    transform: translateY(-3px);
+}
+
+/* <<carte cliquable (dashboard)>> */
+.carte-cliquable {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    transition: box-shadow 0.2s;
+}
+
+.carte-cliquable:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.etiquette-agrandir {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: white;
+    color: var(--vert);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* <<grande carte>> */
+.carte-livreurs.grande {
+    height: 60vh;
+    min-height: 340px;
+}
+
+/* <<points touchables>> */
+button.point {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.15s;
+}
+
+.point.selectionne {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 9px rgba(242, 155, 31, 0.4);
+}
+
+/* <<panneau du livreur sélectionné>> */
+.panneau-livreur {
+    background: white;
+    border-radius: 20px;
+    padding: 18px 20px;
+    margin: 16px 0 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.panneau-livreur .bouton-ajouter {
+    margin: 14px 0 0;
+}
+
+.panneau-livreur .aide {
+    margin: 0;
+    text-align: center;
+}
+
+/* <<carte du chiffre d'affaires>> */
+.carte-ca {
+    background: white;
+    border-radius: 20px;
+    padding: 22px;
+    margin-bottom: 16px;
+    max-width: 720px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.carte-ca h3 {
+    font-size: 14px;
+    color: var(--vert);
+    margin-bottom: 16px;
+}
+
+.ca-haut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ca-total {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--vert);
+}
+
+.ca-meta {
+    display: flex;
+    gap: 32px;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #6B7A72;
+}
+
+.ca-meta strong {
+    display: block;
+    font-size: 18px;
+    color: var(--vert);
+}
+
+/* <<graphique en barres>> */
+.graphique {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    height: 210px;
+}
+
+.colonne {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.colonne-zone {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.colonne-barre {
+    width: 100%;
+    max-width: 44px;
+    min-height: 4px;
+    background: var(--vert);
+    border-radius: 8px 8px 0 0;
+}
+
+.colonne-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--vert);
+}
+
+.colonne small {
+    font-size: 11px;
+    color: #6B7A72;
+}
+
+/* <<répartitions>> */
+.repartition-ligne {
+    margin-bottom: 6px;
+}
+
+.repartition-haut {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--vert);
+}
+
+.repartition-haut span {
+    font-size: 13px;
+    color: #6B7A72;
+}

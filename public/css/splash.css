@@ -1,0 +1,106 @@
+/* <<couleurs>> */
+:root {
+    --vert: #17382B;
+    --orange: #F29B1F;
+}
+
+/* <<réinitialisation>> */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* <<fond dégradé qui occupe tout l'écran>> */
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(160deg, #1B3D2F, #11291F);
+    overflow: hidden;
+    position: relative;
+}
+
+/* <<cercles décoratifs>> */
+.cercle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.cercle-haut {
+    width: 320px;
+    height: 320px;
+    top: -120px;
+    right: -100px;
+    background: #3B4A26;
+    opacity: 0.8;
+}
+
+.cercle-bas {
+    width: 240px;
+    height: 240px;
+    bottom: -90px;
+    left: -80px;
+    background: #1D4332;
+}
+
+/* <<contenu centré au milieu de l'écran>> */
+.splash {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* <<logo : tuile orange avec le W>> */
+.logo-tuile {
+    width: 92px;
+    height: 92px;
+    background: var(--orange);
+    color: var(--vert);
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    font-weight: 800;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 18px;
+}
+
+.splash h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.splash p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+/* <<barre de progression>> */
+.progression {
+    width: 150px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progression-remplie {
+    height: 100%;
+    width: 0;
+    background: var(--orange);
+    border-radius: 4px;
+    animation: remplir 2s ease-in-out forwards;
+}
+
+/* <<animation : la largeur passe de 0 à 100 %>> */
+@keyframes remplir {
+    from { width: 0; }
+    to   { width: 100%; }
+}
